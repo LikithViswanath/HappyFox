@@ -10,13 +10,13 @@ class EmailRepository:
 
     def _create_table(self):
         c = self.conn.cursor()
-        c.execute('''CREATE TABLE IF NOT EXISTS emails (id TEXT PRIMARY KEY, snippet TEXT, payload TEXT)''')
+        c.execute('''CREATE TABLE IF NOT EXISTS emails (packet_id TEXT PRIMARY KEY, snippet TEXT, payload TEXT)''')
         self.conn.commit()
 
     def save(self, email):
         c = self.conn.cursor()
-        c.execute('''INSERT OR REPLACE INTO emails (id, snippet, payload) VALUES (?, ?, ?)''',
-                  (email.id, email.snippet, json.dumps(email.payload)))
+        c.execute('''INSERT OR REPLACE INTO emails (packet_id, snippet, payload) VALUES (?, ?, ?)''',
+                  (email.packet_id, email.snippet, json.dumps(email.payload)))
         self.conn.commit()
 
     def fetch_all(self):

@@ -1,6 +1,9 @@
+from utils.logger import DualLogger
 from utils.oauth import authenticate_gmail
 from repositories.email_repository import EmailRepository
 from models.email import Email
+
+log = DualLogger(__name__).get_logger()
 
 
 class EmailService:
