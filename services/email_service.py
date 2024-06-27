@@ -2,6 +2,7 @@ from utils.oauth import authenticate_gmail
 from repositories.email_repository import EmailRepository
 from models.email import Email
 
+
 class EmailService:
     def __init__(self):
         self.email_repo = EmailRepository()
