@@ -1,5 +1,5 @@
 from utils.oauth import authenticate_gmail
-from repositories.email_repository.py import EmailRepository
+from repositories.email_repository import EmailRepository
 from models.email import Email
 
 class EmailService:
