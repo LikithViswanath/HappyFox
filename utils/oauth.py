@@ -20,5 +20,3 @@ def authenticate_gmail():
             token.write(creds.to_json())
     service = build('gmail', 'v1', credentials=creds)
     return service
-
-
