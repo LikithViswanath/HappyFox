@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="">
+    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="Basic Elements">
       <change afterPath="$PROJECT_DIR$/.idea/HappyFox.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -22,6 +22,7 @@
       <change afterPath="$PROJECT_DIR$/process_emails.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repositories/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/repositories/email_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/rules.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/services/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/services/email_service.py" afterDir="false" />
@@ -85,11 +86,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719471348945</updated>
-      <workItem from="1719471352716" duration="916000" />
+      <workItem from="1719471352716" duration="1472000" />
     </task>
+    <task id="LOCAL-00001" summary="Basic Elements">
+      <option name="closed" value="true" />
+      <created>1719472823132</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719472823132</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic Elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Elements" />
   </component>
 </project>
