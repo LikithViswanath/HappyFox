@@ -1,0 +1,17 @@
+{
+    "rules": [
+        {
+            "field": "From",
+            "predicate": "Contains",
+            "value": "example@example.com",
+            "action": "Mark as read"
+        },
+        {
+            "field": "Subject",
+            "predicate": "Does not Contain",
+            "value": "spam",
+            "action": "Move Message"
+        }
+    ],
+    "predicate": "All"
+}
