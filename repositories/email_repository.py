@@ -2,6 +2,7 @@ from config.db_config import get_connection
 from models.email import Email
 import json
 
+
 class EmailRepository:
     def __init__(self):
         self.conn = get_connection()
@@ -15,7 +16,7 @@ class EmailRepository:
 
     def save(self, email):
         c = self.conn.cursor()
-        c.execute("INSERT OR REPLACE INTO emails (id, snippet, payload) VALUES (?, ?, ?)",
+        c.execute('''INSERT OR REPLACE INTO emails (id, snippet, payload) VALUES (?, ?, ?)''',
                   (email.id, email.snippet, json.dumps(email.payload)))
         self.conn.commit()
 
