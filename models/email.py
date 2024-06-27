@@ -1,6 +1,6 @@
 class Email:
-    def __init__(self, id, snippet, payload):
-        self.id = id
+    def __init__(self, email_id, snippet, payload):
+        self.email_id = email_id
         self.snippet = snippet
         self.payload = payload
 

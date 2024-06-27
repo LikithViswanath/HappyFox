@@ -1,6 +1,7 @@
 from services.email_service import EmailService
 from services.rule_service import RuleService
 
+
 class EmailController:
     def __init__(self, rules_file):
         self.email_service = EmailService()
