@@ -10,8 +10,7 @@ class EmailRepository:
 
     def _create_table(self):
         c = self.conn.cursor()
-        c.execute('''CREATE TABLE IF NOT EXISTS emails
-                     (id TEXT PRIMARY KEY, snippet TEXT, payload TEXT)''')
+        c.execute('''CREATE TABLE IF NOT EXISTS emails (id TEXT PRIMARY KEY, snippet TEXT, payload TEXT)''')
         self.conn.commit()
 
     def save(self, email):
