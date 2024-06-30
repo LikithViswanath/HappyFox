@@ -9,7 +9,7 @@ SQL_ENGINE = create_engine(DATA_BASE_URL)
 DEFAULT_FETCH_LIMIT = 100
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.modify"]
-CREDENTIALS_FILE = '../config/credentials.json'
-TOKEN_FILE = '../config/token.json'
+CREDENTIALS_FILE = '../credentials.json'
+TOKEN_FILE = '../token.json'
 RULES_FILE = '../config/rules.json'
 USER_ID = "magnetoxmen6@gmail.com"

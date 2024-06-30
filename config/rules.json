@@ -11,7 +11,7 @@
       ],
       "condition": "all",
       "action": [
-        "starred"
+        "unread"
       ]
     }
   ]
