@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="v1.1 stable">
-      <change afterPath="$PROJECT_DIR$/utils/env_vars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/rules.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/sql_db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/sql_db_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/action_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/action_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/gmail_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/gmail_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/c4b725ba9e80_model_migration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/gmail_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/gmail_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/rule_action_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/rule_action_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/action_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/action_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/authentication_service.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/email_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/gmail_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategies/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategies/action_performer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategies/query_builder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategies/rule_parse.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/gmail_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/sql_db_config.py" beforeDir="false" />
-    </list>
+    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="v2.1 stable" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +117,7 @@
       <workItem from="1719675406814" duration="147000" />
       <workItem from="1719678651453" duration="29798000" />
       <workItem from="1719746391987" duration="6324000" />
-      <workItem from="1719755292812" duration="13300000" />
+      <workItem from="1719755292812" duration="13826000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Elements">
       <option name="closed" value="true" />
@@ -292,7 +263,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719754430512</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="v2.0 stable">
+      <option name="closed" value="true" />
+      <created>1719771888469</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719771888469</updated>
+    </task>
+    <task id="LOCAL-00020" summary="v2.1 stable">
+      <option name="closed" value="true" />
+      <created>1719772122367</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719772122367</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,18 +294,20 @@
     <MESSAGE value="v1" />
     <MESSAGE value="v1.1" />
     <MESSAGE value="v1.1 stable" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1 stable" />
+    <MESSAGE value="v2.0 stable" />
+    <MESSAGE value="v2.1 stable" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1 stable" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HappyFox$email_controller.coverage" NAME="email_controller Coverage Results" MODIFIED="1719689620979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/HappyFox$fetch_emails.coverage" NAME="fetch_emails Coverage Results" MODIFIED="1719489409125" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HappyFox$query_builder.coverage" NAME="query_builder Coverage Results" MODIFIED="1719750930889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategies" />
-    <SUITE FILE_PATH="coverage/HappyFox$rule_action_controller.coverage" NAME="rule_action_controller Coverage Results" MODIFIED="1719770812025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/HappyFox$rule_action_controller.coverage" NAME="rule_action_controller Coverage Results" MODIFIED="1719772080991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/HappyFox$sql_db_config.coverage" NAME="sql_db_config Coverage Results" MODIFIED="1719683287483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/HappyFox$oauth.coverage" NAME="oauth Coverage Results" MODIFIED="1719486483655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/HappyFox$ChromeDriver.coverage" NAME="ChromeDriver Coverage Results" MODIFIED="1719479900627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/HappyFox$sql_db_manager.coverage" NAME="sql_db_manager Coverage Results" MODIFIED="1719682253919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dao" />
-    <SUITE FILE_PATH="coverage/HappyFox$gmail_controller.coverage" NAME="gmail_controller Coverage Results" MODIFIED="1719770768656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/HappyFox$gmail_controller.coverage" NAME="gmail_controller Coverage Results" MODIFIED="1719771914443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/HappyFox$action_service.coverage" NAME="action_service Coverage Results" MODIFIED="1719746917732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services" />
   </component>
 </project>
