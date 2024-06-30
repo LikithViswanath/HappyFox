@@ -50,9 +50,10 @@ class GmailActionService(GmailAuthenticationService):
                     url=f"https://gmail.googleapis.com/gmail/v1/users/{self.user_id}/messages/{email_model.id}/modify",
                     data=payload,
                     headers=self.auth_headers
-                ).json()
+                )
+                labels = response.json().get('labelIds')
                 if response.status_code == 200:
-                    log.info(f"Successfully modified labels for email {email_model.id}")
+                    log.info(f"Successfully modified labels for email {email_model.id}: {labels}")
                 else:
                     log.error(f"Failed to modify labels for email {email_model.id}: {response.text}")
             except Exception as e:
