@@ -1,6 +1,7 @@
 from entities.gmail_entity import EmailEntity
 from dao.models import Email
 
+
 class EmailModelEntityMapper:
     def email_meta_data_to_model(self, email_meta_data):
         email = EmailEntity(email_meta_data)

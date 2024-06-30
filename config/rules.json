@@ -1,17 +1,18 @@
 {
-    "rules": [
+  "test_cases": [
+    {
+      "rule_description": "test_case1",
+      "rules": [
         {
-            "field": "From",
-            "predicate": "Contains",
-            "value": "example@example.com",
-            "action": "Mark as read"
-        },
-        {
-            "field": "Subject",
-            "predicate": "Does not Contain",
-            "value": "spam",
-            "action": "Move Message"
+          "field": "to_email",
+          "predicate": "equals",
+          "value": "likithviswanath6@gmail.com"
         }
-    ],
-    "predicate": "All"
+      ],
+      "condition": "all",
+      "action": [
+        "unread"
+      ]
+    }
+  ]
 }

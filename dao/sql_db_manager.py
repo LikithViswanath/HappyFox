@@ -1,5 +1,6 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
-from config.sql_db_config import SQL_ENGINE
+from sqlalchemy import inspect
+from utils.sql_db_config import SQL_ENGINE
 
 
 class SqlDbManager:
@@ -19,6 +20,7 @@ class SqlDbManager:
                 sql_session.close()
 
     def execute_query(self, query):
+        print(inspect(query).compile(dialect=SQL_ENGINE.dialect))
         with self.sql_session_obj() as sql_session:
             try:
                 results = sql_session.execute(query).all()

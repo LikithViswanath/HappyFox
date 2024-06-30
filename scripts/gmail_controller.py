@@ -2,6 +2,7 @@ from dao.sql_db_manager import SqlDbManager
 from services.email_service import EmailService
 from services.authentication_service import EmailAuthenticationService
 
+
 def fetch_and_store_email():
     sql_db_manager = SqlDbManager()
     email_authentication_service = EmailAuthenticationService()

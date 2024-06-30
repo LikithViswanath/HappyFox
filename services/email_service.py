@@ -1,8 +1,8 @@
-from utils.model_mapper import EmailModelEntityMapper
+from utils.helper import EmailModelEntityMapper
 from utils.logger import DualLogger
 from dao.sql_db_manager import SqlDbManager
 from services.authentication_service import EmailAuthenticationService
-from config.constants import DEFAULT_FETCH_LIMIT
+from utils.constants import DEFAULT_FETCH_LIMIT
 
 log = DualLogger(__name__).get_logger()
 

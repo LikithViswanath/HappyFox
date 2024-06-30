@@ -1,4 +1,4 @@
-from config.constants import ALLOWED_PREDICATES, ALLOWED_VALUE_TYPES, DATETIME_FIELDS, ALLOWED_TIME_VALUES, ALLOWED_FIELDS
+from utils.constants import ALLOWED_PREDICATES, ALLOWED_VALUE_TYPES, DATETIME_FIELDS, ALLOWED_TIME_VALUES, ALLOWED_FIELDS
 from entities.rule_entity import Rule
 from entities.action_entity import EmailAction
 
