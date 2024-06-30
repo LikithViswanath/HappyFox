@@ -4,20 +4,20 @@ from datetime import datetime
 
 class EmailEntity(object):
     def __init__(self, raw_data):
-        self._data = raw_data
-        self._payload = raw_data['payload']
-        self._headers = self._payload['headers']
-        self._parts = self._payload.get('parts', [])
-        self._body = self._payload.get('body', None)
+        self.data = raw_data
+        self.payload = raw_data['payload']
+        self.headers = self.payload['headers']
+        self.parts = self.payload.get('parts', [])
+        self.body = self.payload.get('body', None)
 
     def _fetch_header_data(self, key):
-        for header in self._headers:
+        for header in self.headers:
             if header['name'] == key:
                 return header['value']
         return None
 
     def get_id(self):
-        return self._data['id']
+        return self.data['id']
 
     def get_to_email(self):
         return self._fetch_header_data('To')
@@ -29,11 +29,11 @@ class EmailEntity(object):
         return self._fetch_header_data('Subject')
 
     def get_body(self):
-        if self._parts:
+        if self.parts:
             text_body = None
             html_body = None
-            parts_data = self._parts
-            for part in self._parts:
+            parts_data = self.parts
+            for part in self.parts:
                 if part['mimeType'] == 'multipart/alternative':
                     parts_data = part['parts']
                     break
@@ -48,6 +48,6 @@ class EmailEntity(object):
         return None
 
     def get_received_date(self):
-        internal_date = self._data['internalDate']
+        internal_date = self.data['internalDate']
         datetime_obj = datetime.fromtimestamp(int(internal_date) / 1000)
         return datetime_obj.strftime("%Y-%m-%d %H:%M:%S")

@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="v1">
-      <change afterPath="$PROJECT_DIR$/config/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sql_db_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/sql_db_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/field_entity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/gmail_entity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/predicate_entity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/gmail_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/token.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/action_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strategies/action_performer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strategies/rule_parse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/model_mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/email-payload.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/gmail_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/gmail_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/action_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/email_controller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/credentials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fetch_emails.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/rule_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/email.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_emails.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/rule_action_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/email_repository.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/authentication_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/email_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/email_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/rule_service.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategies/action_performance.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/strategies/rule_evaluation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/oauth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/gmail_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/gmail_entity.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +113,7 @@
       <workItem from="1719643545754" duration="12124000" />
       <workItem from="1719662677936" duration="11259000" />
       <workItem from="1719675406814" duration="147000" />
-      <workItem from="1719678651453" duration="24610000" />
+      <workItem from="1719678651453" duration="24953000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Elements">
       <option name="closed" value="true" />
@@ -254,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719740930878</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v1">
+      <option name="closed" value="true" />
+      <created>1719740941083</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719740941083</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
