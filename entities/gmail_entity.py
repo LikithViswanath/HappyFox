@@ -2,7 +2,7 @@ import base64
 from datetime import datetime
 
 
-class EmailEntity(object):
+class GmailEntity(object):
     def __init__(self, raw_data):
         self.data = raw_data
         self.payload = raw_data['payload']
@@ -18,6 +18,9 @@ class EmailEntity(object):
 
     def get_id(self):
         return self.data['id']
+
+    def get_thread_id(self):
+        return self.data['threadId']
 
     def get_to_email(self):
         return self._fetch_header_data('To')

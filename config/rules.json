@@ -5,13 +5,13 @@
       "rules": [
         {
           "field": "to_email",
-          "predicate": "equals",
-          "value": "likithviswanath6@gmail.com"
+          "predicate": "contains",
+          "value": "magnetoxmen6@gmail.com"
         }
       ],
       "condition": "all",
       "action": [
-        "unread"
+        "starred"
       ]
     }
   ]

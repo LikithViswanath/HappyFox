@@ -1,4 +1,4 @@
-class EmailAction:
+class GmailAction:
     def __init__(self, rules, condition, action_payloads, rule_description):
         self.rules = rules
         self.rule_description = rule_description

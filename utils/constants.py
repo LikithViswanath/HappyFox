@@ -11,3 +11,4 @@ ALLOWED_TIME_VALUES = {
 }
 AND = 'all'
 OR = 'any'
+ALLOWED_LABELS = {'inbox', 'spam', 'trash', 'starred', 'read', 'unread'}
