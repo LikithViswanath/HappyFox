@@ -1,24 +1,30 @@
+from utils.model_mapper import EmailModelEntityMapper
 from utils.logger import DualLogger
-from utils.oauth import authenticate_gmail
-from repositories.email_repository import EmailRepository
-from models.email import Email
+from dao.sql_db_manager import SqlDbManager
+from services.authentication_service import EmailAuthenticationService
+from config.constants import DEFAULT_FETCH_LIMIT
 
 log = DualLogger(__name__).get_logger()
 
 
 class EmailService:
-    def __init__(self):
-        self.email_repo = EmailRepository()
 
-    def fetch_and_store_emails(self):
-        service = authenticate_gmail()
-        results = service.users().messages().list(userId='me', maxResults=10).execute()
+    def __init__(self, email_authentication_service: EmailAuthenticationService, sql_db_manager: SqlDbManager):
+        self.db_manager = sql_db_manager
+        self.service = email_authentication_service.get_service()
+
+    def fetch_emails(self, limit=DEFAULT_FETCH_LIMIT):
+        results = self.service.users().messages().list(userId='me', maxResults=limit).execute()
         messages = results.get('messages', [])
-        for message in messages:
-            msg = service.users().messages().get(userId='me', id=message['id']).execute()
-            email = Email.from_dict({
-                'id': msg['id'],
-                'snippet': msg['snippet'],
-                'payload': msg['payload']
-            })
-            self.email_repo.save(email)
+        model_mapper = EmailModelEntityMapper()
+        emails = []
+
+        for msg in messages:
+            email_meta_data = self.service.users().messages().get(userId="me", id=msg["id"]).execute()
+            emails.append(model_mapper.email_meta_data_to_model(email_meta_data))
+
+        return emails
+
+    def store_email(self, emails):
+        for email in emails:
+            self.db_manager.save(email)

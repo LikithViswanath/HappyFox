@@ -1,9 +1,6 @@
-google
-google-auth
-google-auth-oauthlib
-google-auth-httplib2
 google-api-python-client
-sqlalchemy
-webdriver-manager
-selenium
-requests
+google-auth-httplib2
+google-auth-oauthlib
+SQLAlchemy
+Alembic
+mysql-connector-python
