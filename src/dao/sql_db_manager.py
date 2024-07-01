@@ -1,7 +1,7 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy import inspect
-from utils.env_vars import SQL_ENGINE
-from utils.logger import Logger
+from src.utils.env_vars import SQL_ENGINE
+from src.utils.logger import Logger
 
 log = Logger(__name__).get_logger()
 

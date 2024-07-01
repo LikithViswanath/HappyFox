@@ -1,10 +1,10 @@
 import argparse
-from dao.models import Base
-from dao.sql_db_manager import SqlDbManager
-from utils.env_vars import SQL_ENGINE
-from utils.logger import Logger
-from services.gmail_service import GmailService
-from utils.constants import DEFAULT_FETCH_LIMIT
+from src.dao.models import Base
+from src.dao.sql_db_manager import SqlDbManager
+from src.utils.env_vars import SQL_ENGINE
+from src.utils.logger import Logger
+from src.services.gmail_service import GmailService
+from src.utils.constants import DEFAULT_FETCH_LIMIT
 
 log = Logger(__name__).get_logger()
 

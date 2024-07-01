@@ -1,5 +1,5 @@
 import logging
-from utils.env_vars import LOGGING_LEVEL
+from src.utils.env_vars import LOGGING_LEVEL
 
 
 class Logger:

@@ -1,11 +1,11 @@
 import requests
 from sqlalchemy import select
-from dao.sql_db_manager import SqlDbManager
-from entities.action_entity import GmailAction
-from dao.models import Email
-from utils.helper import QueryBuilder
-from utils.logger import Logger
-from services.auth_service import GmailAuthenticationService
+from src.dao.sql_db_manager import SqlDbManager
+from src.entities.action_entity import GmailAction
+from src.dao.models import Email
+from src.utils.helper import QueryBuilder
+from src.utils.logger import Logger
+from src.services.auth_service import GmailAuthenticationService
 
 log = Logger(__name__).get_logger()
 

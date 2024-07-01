@@ -3,8 +3,8 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from utils.env_vars import TOKEN_FILE, CREDENTIALS_FILE, SCOPES, USER_ID
-from utils.logger import Logger
+from src.utils.env_vars import TOKEN_FILE, CREDENTIALS_FILE, SCOPES, USER_ID
+from src.utils.logger import Logger
 
 log = Logger(__name__).get_logger()
 

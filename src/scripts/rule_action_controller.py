@@ -1,10 +1,10 @@
 import json
 import argparse
-from dao.sql_db_manager import SqlDbManager
-from services.action_service import GmailActionService
-from utils.helper import RuleParser
-from utils.env_vars import RULES_FILE
-from utils.logger import Logger
+from src.dao.sql_db_manager import SqlDbManager
+from src.services.action_service import GmailActionService
+from src.utils.helper import RuleParser
+from src.utils.env_vars import RULES_FILE
+from src.utils.logger import Logger
 
 log = Logger(__name__).get_logger()
 
@@ -32,7 +32,7 @@ if __name__ == '__main__':
                         required=False, default=RULES_FILE)
 
     args = parser.parse_args()
-    testcase_file = args.testcase_path
+    testcase_file = args.test_path
 
     with open(testcase_file, "r") as rules_file:
         rules_meta_json = json.load(rules_file)

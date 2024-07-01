@@ -1,6 +1,6 @@
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, String, Text, DateTime
-from utils.env_vars import SQL_ENGINE
+from src.utils.env_vars import SQL_ENGINE
 
 Base = declarative_base()
 

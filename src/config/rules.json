@@ -21,7 +21,22 @@
       ],
       "condition": "all",
       "action": [
-        "un-archive"
+        "unread",
+        "starred"
+      ]
+    },
+    {
+      "rule_description": "test_case1",
+      "rules": [
+        {
+          "field": "to_email",
+          "predicate": "contains",
+          "value": "magnetoxmen6@gmail.com"
+        }
+      ],
+      "condition": "all",
+      "action": [
+        "read"
       ]
     }
   ]

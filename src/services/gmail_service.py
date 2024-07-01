@@ -1,8 +1,8 @@
-from utils.helper import Utility
-from utils.logger import Logger
-from dao.sql_db_manager import SqlDbManager
-from services.auth_service import GmailAuthenticationService
-from utils.constants import DEFAULT_FETCH_LIMIT
+from src.utils.helper import Utility
+from src.utils.logger import Logger
+from src.dao.sql_db_manager import SqlDbManager
+from src.services.auth_service import GmailAuthenticationService
+from src.utils.constants import DEFAULT_FETCH_LIMIT
 
 log = Logger(__name__).get_logger()
 
@@ -35,7 +35,7 @@ class GmailService(GmailAuthenticationService):
     def store_email(self, emails):
         for email in emails:
             try:
-                log.info(f"Storing email with ID: {email.id}")
+                log.info(f"Storing email with ID: {email.id} and Subject: {email.subject}")
                 self.db_manager.save(email)
             except Exception as e:
                 log.error(f"Error storing email with ID: {email.id} - {e}")

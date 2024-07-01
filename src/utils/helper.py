@@ -1,13 +1,13 @@
 from datetime import datetime, timedelta
-from utils.constants import AND, OR
+from src.utils.constants import AND, OR
 from sqlalchemy import Column
-from entities.gmail_entity import GmailEntity
-from dao.models import Email
-from utils.constants import (ALLOWED_PREDICATES, ALLOWED_VALUE_TYPES, DATETIME_FIELDS, ALLOWED_TIME_VALUES,
+from src.entities.gmail_entity import GmailEntity
+from src.dao.models import Email
+from src.utils.constants import (ALLOWED_PREDICATES, ALLOWED_VALUE_TYPES, DATETIME_FIELDS, ALLOWED_TIME_VALUES,
                                  ALLOWED_FIELDS, ALLOWED_LABELS, LABEL_MAPPER)
-from entities.rule_entity import Rule
-from entities.action_entity import GmailAction
-from utils.logger import Logger
+from src.entities.rule_entity import Rule
+from src.entities.action_entity import GmailAction
+from src.utils.logger import Logger
 
 log = Logger(__name__).get_logger()
 
