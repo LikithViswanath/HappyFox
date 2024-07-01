@@ -9,11 +9,6 @@
           "value": "magnetoxmen6@gmail.com"
         },
         {
-          "field": "subject",
-          "predicate": "contains",
-          "value": "Test"
-        },
-        {
           "field":"received_date",
           "predicate": "less_than",
           "value": "1 days"
@@ -29,14 +24,19 @@
       "rule_description": "test_case1",
       "rules": [
         {
-          "field": "to_email",
+          "field": "from_email",
           "predicate": "contains",
-          "value": "magnetoxmen6@gmail.com"
+          "value": "likithviswanath6@gmail.com"
+        },
+        {
+          "field": "subject",
+          "predicate": "contains",
+          "value": "Test"
         }
       ],
-      "condition": "all",
+      "condition": "any",
       "action": [
-        "read"
+        "inbox"
       ]
     }
   ]
