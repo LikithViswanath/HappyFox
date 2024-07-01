@@ -52,7 +52,7 @@ class GmailActionService(GmailAuthenticationService):
                 )
                 labels = response.json().get('labelIds')
                 if response.status_code == 200:
-                    log.info(f"Successfully modified labels for email {email_model.id}: {labels}")
+                    log.info(f"Successfully modified labels for email {email_model.id} : {email_model.subject} : {labels}")
                 else:
                     log.error(f"Failed to modify labels for email {email_model.id}: {response.text}")
             except Exception as e:

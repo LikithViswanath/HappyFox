@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="stable 3.3">
-      <change beforePath="$PROJECT_DIR$/src/utils/env_vars.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/env_vars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/sql_db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/sql_db_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/gmail_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/gmail_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/action_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/action_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +128,7 @@
       <workItem from="1719808721710" duration="13000" />
       <workItem from="1719810606830" duration="7844000" />
       <workItem from="1719821561199" duration="3189000" />
-      <workItem from="1719826031806" duration="24000" />
+      <workItem from="1719826031806" duration="1457000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Elements">
       <option name="closed" value="true" />
@@ -373,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719824010007</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="stable 3.3">
+      <option name="closed" value="true" />
+      <created>1719826063418</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1719826063418</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

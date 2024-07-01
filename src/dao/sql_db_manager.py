@@ -16,7 +16,7 @@ class SqlDbManager:
             try:
                 sql_session.add(model_object)
                 sql_session.commit()
-                log.info(f"Successfully saved object of type {type(model_object)}")
+                log.debug(f"Successfully saved object of type {type(model_object)}")
             except Exception as e:
                 sql_session.rollback()
                 log.error(f"Error saving object: {e}")

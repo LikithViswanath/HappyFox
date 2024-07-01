@@ -5,6 +5,7 @@ from src.utils.env_vars import SQL_ENGINE
 from src.utils.logger import Logger
 from src.services.gmail_service import GmailService
 from src.utils.constants import DEFAULT_FETCH_LIMIT
+from src.utils.env_vars import LOGGING_LEVEL
 
 log = Logger(__name__).get_logger()
 

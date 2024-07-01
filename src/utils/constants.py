@@ -1,4 +1,4 @@
-DEFAULT_FETCH_LIMIT = 10
+DEFAULT_FETCH_LIMIT = 12
 TIME_ENTITIES = ["days", "weeks", "months"]
 ALLOWED_FIELDS = ["to_email", "from_email", "subject", "body", "received_date"]
 ALLOWED_PREDICATES = ["less_than", "greater_than", "contains", "equals", "not_equals"]
