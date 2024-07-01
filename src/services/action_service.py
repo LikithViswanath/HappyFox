@@ -3,7 +3,7 @@ from sqlalchemy import select
 from src.dao.sql_db_manager import SqlDbManager
 from src.entities.action_entity import GmailAction
 from src.dao.models import Email
-from src.utils.helper import QueryBuilder
+from src.utils.helper import QueryBuilder, RuleParser
 from src.utils.logger import Logger
 from src.services.auth_service import GmailAuthenticationService
 
@@ -15,10 +15,13 @@ class GmailActionService(GmailAuthenticationService):
         super().__init__()
         self.sql_db_manager = sql_db_manager
         self.query_builder = QueryBuilder()
+        self.rule_parser = RuleParser()
 
-    def perform_actions(self, email_actions):
+    def perform_actions(self, rules):
 
         log.info("Starting email action processing...")
+
+        email_actions = self.rule_parser.parse_rules(rules)
 
         for email_action in email_actions:
 
