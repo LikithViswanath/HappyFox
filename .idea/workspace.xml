@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="test-case 1.1">
-      <change beforePath="$PROJECT_DIR$/src/config/rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/rules.json" afterDir="false" />
+    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="stable 3.3">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
       <workItem from="1719755292812" duration="14174000" />
       <workItem from="1719808721710" duration="13000" />
       <workItem from="1719810606830" duration="7844000" />
-      <workItem from="1719821561199" duration="1493000" />
+      <workItem from="1719821561199" duration="2330000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Elements">
       <option name="closed" value="true" />
@@ -356,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719823061664</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="stable 3.3">
+      <option name="closed" value="true" />
+      <created>1719823316118</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1719823316118</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +389,8 @@
     <MESSAGE value="v2.6 test" />
     <MESSAGE value="v2.7 stable" />
     <MESSAGE value="test-case 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test-case 1.1" />
+    <MESSAGE value="stable 3.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable 3.3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HappyFox$email_controller.coverage" NAME="email_controller Coverage Results" MODIFIED="1719689620979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
