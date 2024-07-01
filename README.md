@@ -14,11 +14,11 @@
     ```{console}
    pip3 install -r requirements.txt
    ```
-4. Setup Python Path
+4. Set up the Python Path
     ```{console}
     export PYTHONPATH=$PYTHONPATH:./
     ```
-5. Setup the database connection using Docker compose ( docker-compose is installed )
+5. Set up the database connection using Docker compose ( docker-compose is installed )
     ```{console}
     docker-compose -f docker-compose.yaml up -d
     ```
