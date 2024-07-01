@@ -17,3 +17,7 @@ class Email(Base):
 
 
 Base.metadata.create_all(SQL_ENGINE)
+
+def flush_db_tables():
+    Base.metadata.drop_all(SQL_ENGINE)
+    Base.metadata.create_all(SQL_ENGINE)

@@ -1,11 +1,9 @@
 import argparse
-from src.dao.models import Base
+from src.dao.models import flush_db_tables
 from src.dao.sql_db_manager import SqlDbManager
-from src.utils.env_vars import SQL_ENGINE
 from src.utils.logger import Logger
 from src.services.gmail_service import GmailService
 from src.utils.constants import DEFAULT_FETCH_LIMIT
-from src.utils.env_vars import LOGGING_LEVEL
 
 log = Logger(__name__).get_logger()
 
@@ -18,8 +16,9 @@ def fetch_and_store_gmail(limit: int, flush: bool):
 
     try:
         if flush:
-            Base.metadata.drop_all(SQL_ENGINE)
-            Base.metadata.create_all(SQL_ENGINE)
+            log.info("Flushing tables...")
+            flush_db_tables()
+            log.info("tables flushed")
     except Exception as e:
         log.error(f"Error while flushing tables: {e}")
 
