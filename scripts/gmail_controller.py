@@ -4,6 +4,7 @@ from dao.sql_db_manager import SqlDbManager
 from utils.env_vars import SQL_ENGINE
 from utils.logger import Logger
 from services.gmail_service import GmailService
+from utils.constants import DEFAULT_FETCH_LIMIT
 
 log = Logger(__name__).get_logger()
 
@@ -37,7 +38,7 @@ if __name__ == '__main__':
     parser.add_argument("--flush", type=bool, help="To Drop records in MySQL DB, eg: True/False",
                         required=False, default=False)
     parser.add_argument("--limit", type=int, help="Gmail fetch limit, give values between 1 to 20",
-                        required=False, default=10)
+                        required=False, default=DEFAULT_FETCH_LIMIT)
     args = parser.parse_args()
     fetch_and_store_gmail(args.limit, args.flush)
 
