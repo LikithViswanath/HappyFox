@@ -1,6 +1,5 @@
 import json
 import argparse
-from src.dao.sql_db_manager import SqlDbManager
 from src.services.action_service import GmailActionService
 from src.utils.helper import RuleParser
 from src.utils.env_vars import RULES_FILE
@@ -12,10 +11,7 @@ log = Logger(__name__).get_logger()
 def parse_rules_and_perform_actions(rules_meta):
     log.info("Starting email action processing...")
 
-    sql_db_manager = SqlDbManager()
-    action_service = GmailActionService(
-        sql_db_manager=sql_db_manager
-    )
+    action_service = GmailActionService()
 
     try:
         email_actions = RuleParser().parse_rules(rules_meta.get('test_cases'))

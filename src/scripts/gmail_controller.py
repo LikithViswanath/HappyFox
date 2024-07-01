@@ -4,6 +4,7 @@ from src.dao.sql_db_manager import SqlDbManager
 from src.utils.logger import Logger
 from src.services.gmail_service import GmailService
 from src.utils.constants import DEFAULT_FETCH_LIMIT
+from src.utils.env_vars import SQL_ENGINE
 
 log = Logger(__name__).get_logger()
 
@@ -11,7 +12,7 @@ log = Logger(__name__).get_logger()
 def fetch_and_store_gmail(limit: int, flush: bool):
     log.info("Starting Gmail fetching and storing process...")
 
-    sql_db_manager = SqlDbManager()
+    sql_db_manager = SqlDbManager(SQL_ENGINE)
     email_service = GmailService(sql_db_manager)
 
     try:
@@ -29,6 +30,8 @@ def fetch_and_store_gmail(limit: int, flush: bool):
         log.info(f"Successfully stored {len(emails)} emails in the database.")
     except Exception as e:
         log.error(f"Error during email fetching or storing: {e}")
+    finally:
+        sql_db_manager.close_connection()
 
     log.info("Gmail fetching and storing process completed.")
 

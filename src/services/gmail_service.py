@@ -1,3 +1,4 @@
+from src.utils.env_vars import SQL_ENGINE
 from src.utils.helper import Utility
 from src.utils.logger import Logger
 from src.dao.sql_db_manager import SqlDbManager

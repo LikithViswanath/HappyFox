@@ -1,14 +1,14 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy import inspect
-from src.utils.env_vars import SQL_ENGINE
 from src.utils.logger import Logger
 
 log = Logger(__name__).get_logger()
 
 
 class SqlDbManager:
-    def __init__(self):
-        session_factory = sessionmaker(SQL_ENGINE)
+    def __init__(self, engine):
+        self._engine = engine
+        session_factory = sessionmaker(engine)
         self.sql_session_obj = scoped_session(session_factory)
 
     def save(self, model_object):
@@ -23,7 +23,7 @@ class SqlDbManager:
                 raise
 
     def execute_query(self, query):
-        log.debug(f"Executing SQL query: {inspect(query).compile(dialect=SQL_ENGINE.dialect)}")
+        log.debug(f"Executing SQL query: {inspect(query).compile(dialect=self._engine.dialect)}")
         with self.sql_session_obj() as sql_session:
             try:
                 results = sql_session.execute(query).all()
