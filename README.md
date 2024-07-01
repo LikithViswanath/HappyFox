@@ -22,11 +22,11 @@
     ```{console}
     docker-compose -f docker-compose.yaml up -d
     ```
-6. Run the mail_data_loader.py script to load data from gmail to DB.
+6. Run the below python script to load data from your gmail to MySql DataBase.
     ```{console}
     python3 src/scripts/gmail_controller.py --flush True --limit 12
     ```
-7. Run the rule_executor.py script to perform required actions.
+7. Run the below python script to perform the rules setup in rules.json or create a custom rules.
     ```{console}
-    python3 src/scripts/rule_action_controller.py
+    python3 src/scripts/rule_action_controller.py --test_path src/config/rules.json
     ```
