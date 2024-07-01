@@ -7,11 +7,21 @@
           "field": "to_email",
           "predicate": "contains",
           "value": "magnetoxmen6@gmail.com"
+        },
+        {
+          "field": "subject",
+          "predicate": "contains",
+          "value": "Test"
+        },
+        {
+          "field":"received_date",
+          "predicate": "less_than",
+          "value": "1 days"
         }
       ],
       "condition": "all",
       "action": [
-        "unread"
+        "un-archive"
       ]
     }
   ]

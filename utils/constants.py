@@ -11,4 +11,10 @@ ALLOWED_TIME_VALUES = {
 }
 AND = 'all'
 OR = 'any'
-ALLOWED_LABELS = {'inbox', 'spam', 'trash', 'starred', 'read', 'unread'}
+ALLOWED_LABELS = {'inbox', 'spam', 'trash', 'starred', 'read', 'unread', 'archive', 'un-archive'}
+LABEL_MAPPER = {
+    "read": {"removeLabelIds": "UNREAD"},
+    "unread": {"addLabelIds": "UNREAD"},
+    "archive": {"removeLabelIds": "INBOX"},
+    "un-archive": {"addLabelIds": "INBOX"}
+}

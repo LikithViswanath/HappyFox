@@ -25,8 +25,8 @@ class GmailActionService(GmailAuthenticationService):
             if not isinstance(email_action, GmailAction):
                 raise ValueError('Action must be an instance of EmailAction')
 
-            log.info(f"Processing email action: type={email_action.action_payloads}, "
-                     f"rules={email_action.rule_description}, condition={email_action.condition}")
+            log.info(f"Processing email action: type={email_action.action_payload}, "
+                     f"rule_description={email_action.rule_description}, condition={email_action.condition}")
 
             try:
                 action_query = self.query_builder.build_action_query(email_action.rules, email_action.condition)
@@ -37,8 +37,7 @@ class GmailActionService(GmailAuthenticationService):
                 log.error(f"Error processing email action: {e}")
                 continue
 
-            for action_payload in email_action.action_payloads:
-                self._modify_labels(action_payload, query_result)
+            self._modify_labels(email_action.action_payload, query_result)
 
         log.info("Finished email action processing.")
 
@@ -59,4 +58,3 @@ class GmailActionService(GmailAuthenticationService):
             except Exception as e:
                 log.error(f"Error making request to Gmail API for email {email_model.id}: {e}")
                 continue
-

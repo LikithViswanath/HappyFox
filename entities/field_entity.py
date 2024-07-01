@@ -1,4 +1,4 @@
 
 class Field:
-    def __init__(self, field, time_field):
+    def __init__(self, field):
         self.field_name = field

@@ -4,7 +4,7 @@ from sqlalchemy import Column
 from entities.gmail_entity import GmailEntity
 from dao.models import Email
 from utils.constants import (ALLOWED_PREDICATES, ALLOWED_VALUE_TYPES, DATETIME_FIELDS, ALLOWED_TIME_VALUES,
-                             ALLOWED_FIELDS, ALLOWED_LABELS)
+                             ALLOWED_FIELDS, ALLOWED_LABELS,LABEL_MAPPER)
 from entities.rule_entity import Rule
 from entities.action_entity import GmailAction
 from utils.logger import Logger
@@ -44,12 +44,14 @@ class QueryBuilder:
 
             column = Email.getattr(rule.field)
 
-            log.debug(f"Building query for rule: field - {rule.field}, predicate - {rule.predicate}, value - {rule.value}, time - {rule.time}")
+            log.debug(
+                f"Building query for rule: field - {rule.field}, predicate - {rule.predicate}, "
+                f"value - {rule.value}, time - {rule.time}")
 
             try:
                 if rule.time:
                     kwargs = {rule.time: rule.value}
-                    query = query_method(column, rule.value, **kwargs)
+                    query = query_method(column, **kwargs)
                 else:
                     kwargs = {}
                     query = query_method(column, rule.value, **kwargs)
@@ -101,7 +103,7 @@ class RuleParser:
             raw_rules = rule_meta.get('rules')
             rule_description = rule_meta.get('description')
             condition = rule_meta.get('condition')
-            action_payloads = self._parse_action_to_payloads(rule_meta.get('action'))
+            action_payload = self._parse_action_to_payload(rule_meta.get('action'))
 
             log.debug(f"Parsing rule: rule_description - {rule_description}")
 
@@ -117,7 +119,7 @@ class RuleParser:
                         raw_rule['field'],
                         raw_rule['value']
                     )
-                except (ValueError, KeyError) as e:
+                except Exception as e:
                     log.error(f"Error validating rule: {e}")
                     raise e
 
@@ -133,7 +135,7 @@ class RuleParser:
                 rules=rules,
                 rule_description=rule_description,
                 condition=condition,
-                action_payloads=action_payloads
+                action_payload=action_payload
             ))
 
         return action_list
@@ -162,22 +164,28 @@ class RuleParser:
             if time not in ALLOWED_TIME_VALUES.keys():
                 raise ValueError(f"Invalid value, supported time shift - {ALLOWED_TIME_VALUES.keys()}")
 
-            if val > ALLOWED_TIME_VALUES[time]:
+            if int(val) > ALLOWED_TIME_VALUES[time]:
                 raise ValueError(f"Invalid value, supported time shift - {ALLOWED_TIME_VALUES[time]}")
 
-            return val, time
+            return int(val), time
         else:
             return value, None
 
-    def _parse_action_to_payloads(self, action):
-        action_mapper = {
-            "read": {"removeLabelIds": ["UNREAD"]},
-            "unread": {"addLabelIds": ["UNREAD"]},
+    def _parse_action_to_payload(self, action):
+        action_payloads = {
+            "removeLabelIds": [],
+            "addLabelIds": [],
         }
-        action_payloads = []
         for x in action:
             if x not in ALLOWED_LABELS:
                 raise ValueError(f"Invalid action, supported action types are - {ALLOWED_LABELS}")
-            action_payloads.append(action_mapper[x] if action_mapper.get(x) else {"addLabelIds": [x.upper()]})
+            if x in LABEL_MAPPER:
+                label_payload = LABEL_MAPPER[x]
+                if "removeLabelIds" in label_payload:
+                    action_payloads["removeLabelIds"].append(label_payload["removeLabelIds"])
+                elif "addLabelIds" in label_payload:
+                    action_payloads["addLabelIds"].append(label_payload["addLabelIds"])
+            else:
+                action_payloads["addLabelIds"].append(x.upper())
 
         return action_payloads
