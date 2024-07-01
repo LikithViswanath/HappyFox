@@ -15,10 +15,5 @@ class Email(Base):
     body = Column(Text)
     received_date = Column(DateTime, index=True)
 
-    @classmethod
-    def getattr(cls, column_name: str):
-        if cls.__dict__.get(column_name):
-            return cls.__dict__.get(column_name)
-
 
 Base.metadata.create_all(SQL_ENGINE)

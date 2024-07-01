@@ -42,8 +42,6 @@ class QueryBuilder:
             if query_method is None:
                 raise ValueError(f'Rule {rule.predicate} is not defined')
 
-            column = Email.getattr(rule.field)
-
             log.debug(
                 f"Building query for rule: field - {rule.field}, predicate - {rule.predicate}, "
                 f"value - {rule.value}, time - {rule.time}")
@@ -51,10 +49,10 @@ class QueryBuilder:
             try:
                 if rule.time:
                     kwargs = {rule.time: rule.value}
-                    query = query_method(column, **kwargs)
+                    query = query_method(rule.field, **kwargs)
                 else:
                     kwargs = {}
-                    query = query_method(column, rule.value, **kwargs)
+                    query = query_method(rule.field, rule.value, **kwargs)
             except (ValueError, TypeError) as e:
                 log.error(f"Error building query for rule: {e}")
                 continue
@@ -69,25 +67,25 @@ class QueryBuilder:
 
         return action_query
 
-    def less_than(self, column: Column, **kwargs):
+    def less_than(self, field: str, **kwargs):
         bound_range = datetime.now().today() - timedelta(**kwargs)
-        return column > bound_range
+        return Column(field) > bound_range
 
-    def greater_than(self, column: Column, **kwargs):
+    def greater_than(self, field: str, **kwargs):
         bound_range = datetime.now().today() - timedelta(**kwargs)
-        return column < bound_range
+        return Column(field) < bound_range
 
-    def contains(self, column: Column, value: str, **kwargs):
-        return column.ilike(f"%{value.lower()}%")
+    def contains(self, field: str, value: str, **kwargs):
+        return Column(field).ilike(f"%{value.lower()}%")
 
-    def not_contains(self, column: Column, value: str, **kwargs):
-        return not column.ilike(f"%{value.lower()}%")
+    def not_contains(self, field: str, value: str, **kwargs):
+        return not Column(field).ilike(f"%{value.lower()}%")
 
-    def equals(self, column: Column, value: str, **kwargs):
-        return column == value
+    def equals(self, field: str, value: str, **kwargs):
+        return Column(field) == value
 
-    def not_equals(self, column: Column, value, **kwargs):
-        return column != value
+    def not_equals(self, field: str, value: str, **kwargs):
+        return Column(field) != value
 
 
 class RuleParser:

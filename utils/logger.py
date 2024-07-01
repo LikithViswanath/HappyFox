@@ -1,8 +1,9 @@
 import logging
+from utils.env_vars import LOGGING_LEVEL
 
 
 class Logger:
-    def __init__(self, name=__name__, level=logging.DEBUG):
+    def __init__(self, name=__name__, level=LOGGING_LEVEL):
         self.logger = logging.getLogger(name)
         self.logger.setLevel(level)
 
