@@ -4,6 +4,8 @@ from src.services.action_service import GmailActionService
 from src.utils.helper import RuleParser
 from src.utils.env_vars import RULES_FILE
 from src.utils.logger import Logger
+from src.dao.sql_db_manager import SqlDbManager
+from src.utils.env_vars import SQL_ENGINE
 
 log = Logger(__name__).get_logger()
 
@@ -11,13 +13,17 @@ log = Logger(__name__).get_logger()
 def parse_rules_and_perform_actions(rules_meta):
     log.info("Starting email action processing...")
 
-    action_service = GmailActionService()
+    sql_db_manager = SqlDbManager(SQL_ENGINE)
+    action_service = GmailActionService(sql_db_manager)
+    rule_parser = RuleParser()
 
     try:
-        email_actions = RuleParser().parse_rules(rules_meta.get('test_cases'))
+        email_actions = rule_parser.parse_rules(rules_meta.get('test_cases'))
         action_service.perform_actions(email_actions)
     except Exception as e:
         log.error(f"Error during rule parsing or action execution: {e}")
+    finally:
+        sql_db_manager.close_connection()
 
     log.info("Finished email action processing.")
 

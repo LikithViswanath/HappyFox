@@ -3,7 +3,6 @@ from sqlalchemy import select
 from src.dao.sql_db_manager import SqlDbManager
 from src.entities.action_entity import GmailAction
 from src.dao.models import Email
-from src.utils.env_vars import SQL_ENGINE
 from src.utils.helper import QueryBuilder
 from src.utils.logger import Logger
 from src.services.auth_service import GmailAuthenticationService
@@ -12,9 +11,9 @@ log = Logger(__name__).get_logger()
 
 
 class GmailActionService(GmailAuthenticationService):
-    def __init__(self):
+    def __init__(self, sql_db_manager: SqlDbManager):
         super().__init__()
-        self.sql_db_manager = SqlDbManager(SQL_ENGINE)
+        self.sql_db_manager = sql_db_manager
         self.query_builder = QueryBuilder()
 
     def perform_actions(self, email_actions):
@@ -37,8 +36,6 @@ class GmailActionService(GmailAuthenticationService):
             except Exception as e:
                 log.error(f"Error processing email action: {e}")
                 continue
-            finally:
-                self.sql_db_manager.close_connection()
 
             self._modify_labels(email_action.action_payload, query_result)
 
