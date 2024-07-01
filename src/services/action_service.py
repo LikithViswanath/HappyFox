@@ -26,10 +26,10 @@ class GmailActionService(GmailAuthenticationService):
                 raise ValueError('Action must be an instance of EmailAction')
 
             log.info(f"Processing email action: type={email_action.action_payload}, "
-                     f"rule_description={email_action.rule_description}, condition={email_action.condition}")
+                     f"rule_description={email_action.rule_description}, condition={email_action.predicate}")
 
             try:
-                action_query = self.query_builder.build_action_query(email_action.rules, email_action.condition)
+                action_query = self.query_builder.build_action_query(email_action.rules, email_action.predicate)
                 query_result = self.sql_db_manager.execute_query(select(Email).filter(action_query))
                 num_matched_emails = len(query_result)
                 log.info(f"Found {num_matched_emails} emails matching the action criteria.")

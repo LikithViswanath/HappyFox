@@ -28,7 +28,7 @@ class Utility:
 
 class QueryBuilder:
 
-    def build_action_query(self, rules, action_condition):
+    def build_action_query(self, rules, predicate):
 
         action_query = None
 
@@ -37,13 +37,13 @@ class QueryBuilder:
             if not isinstance(rule, Rule):
                 raise TypeError(f'Rule must be of type {Rule}')
 
-            query_method = getattr(self, rule.predicate, None)
+            query_method = getattr(self, rule.condition, None)
 
             if query_method is None:
-                raise ValueError(f'Rule {rule.predicate} is not defined')
+                raise ValueError(f'Rule {rule.condition} is not defined')
 
             log.debug(
-                f"Building query for rule: field - {rule.field}, predicate - {rule.predicate}, "
+                f"Building query for rule: field - {rule.field}, condition - {rule.condition}, "
                 f"value - {rule.value}, time - {rule.time}")
 
             try:
@@ -60,9 +60,9 @@ class QueryBuilder:
             if action_query is None:
                 action_query = query
             else:
-                if action_condition == AND:
+                if predicate == AND:
                     action_query = action_query & query
-                elif action_query == OR:
+                elif predicate == OR:
                     action_query = action_query | query
 
         return action_query
@@ -100,7 +100,7 @@ class RuleParser:
 
             raw_rules = rule_meta.get('rules')
             rule_description = rule_meta.get('description')
-            condition = rule_meta.get('condition')
+            predicate = rule_meta.get('predicate')
             action_payload = self._parse_action_to_payload(rule_meta.get('action'))
 
             log.debug(f"Parsing rule: rule_description - {rule_description}")
@@ -111,8 +111,8 @@ class RuleParser:
                 try:
                     parse_field = self._validate_and_parse_field(raw_rule['field'])
                     log.debug(f"Validated field: {parse_field}")
-                    parse_predicate = self._validate_and_parse_predicate(raw_rule['predicate'])
-                    log.debug(f"Validated predicate: {parse_predicate}")
+                    parse_condition = self._validate_and_parse_condition(raw_rule['condition'])
+                    log.debug(f"Validated condition: {parse_condition}")
                     parse_value, parsed_time = self._validate_and_parse_value(
                         raw_rule['field'],
                         raw_rule['value']
@@ -123,7 +123,7 @@ class RuleParser:
 
                 rule = Rule(
                     field=parse_field,
-                    predicate=parse_predicate,
+                    condition=parse_condition,
                     value=parse_value,
                     time=parsed_time
                 )
@@ -132,7 +132,7 @@ class RuleParser:
             action_list.append(GmailAction(
                 rules=rules,
                 rule_description=rule_description,
-                condition=condition,
+                predicate=predicate,
                 action_payload=action_payload
             ))
 
@@ -144,7 +144,7 @@ class RuleParser:
 
         return field
 
-    def _validate_and_parse_predicate(self, predicate):
+    def _validate_and_parse_condition(self, predicate):
         if predicate not in ALLOWED_PREDICATES:
             raise ValueError(f"Invalid predicate name, please give anyone of these - {ALLOWED_PREDICATES}")
 

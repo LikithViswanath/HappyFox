@@ -1,6 +1,6 @@
 class GmailAction:
-    def __init__(self, rules, condition, action_payload, rule_description):
+    def __init__(self, rules, predicate, action_payload, rule_description):
         self.rules = rules
         self.rule_description = rule_description
-        self.condition = condition
+        self.predicate = predicate
         self.action_payload = action_payload

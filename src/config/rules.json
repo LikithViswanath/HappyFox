@@ -5,36 +5,36 @@
       "rules": [
         {
           "field": "to_email",
-          "predicate": "contains",
+          "condition": "contains",
           "value": "magnetoxmen6@gmail.com"
         },
         {
           "field":"received_date",
-          "predicate": "less_than",
+          "condition": "less_than",
           "value": "1 days"
         }
       ],
-      "condition": "all",
+      "predicate": "all",
       "action": [
         "unread",
         "starred"
       ]
     },
     {
-      "rule_description": "test_case1",
+      "rule_description": "test_case2",
       "rules": [
         {
           "field": "from_email",
-          "predicate": "contains",
+          "condition": "contains",
           "value": "likithviswanath6@gmail.com"
         },
         {
           "field": "subject",
-          "predicate": "contains",
+          "condition": "contains",
           "value": "Test"
         }
       ],
-      "condition": "any",
+      "predicate": "any",
       "action": [
         "archive"
       ]
