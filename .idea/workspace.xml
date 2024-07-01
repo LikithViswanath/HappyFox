@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="stable 3.3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/sql_db_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/sql_db_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/gmail_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/gmail_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/action_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/action_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.py" afterDir="false" />
-    </list>
+    <list default="true" id="ebb87c1d-b4b4-4d50-969c-5b6e738e7156" name="Changes" comment="stable 3.5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +121,7 @@
       <workItem from="1719808721710" duration="13000" />
       <workItem from="1719810606830" duration="7844000" />
       <workItem from="1719821561199" duration="3189000" />
-      <workItem from="1719826031806" duration="1457000" />
+      <workItem from="1719826031806" duration="2217000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Elements">
       <option name="closed" value="true" />
@@ -386,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719826063418</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="stable 3.5">
+      <option name="closed" value="true" />
+      <created>1719827635116</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1719827635116</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +412,8 @@
     <MESSAGE value="v2.7 stable" />
     <MESSAGE value="test-case 1.1" />
     <MESSAGE value="stable 3.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="stable 3.3" />
+    <MESSAGE value="stable 3.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable 3.5" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HappyFox$email_controller.coverage" NAME="email_controller Coverage Results" MODIFIED="1719689620979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />

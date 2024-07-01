@@ -2,13 +2,16 @@
 
 SCRIPT_NAME=$(basename "$0")
 
+echo "Going inside HappyFox"
+cd HappyFox || exit
+
 echo "** Creating virtual environment (HappyFox)..."
-python3 -m venv HappyFox
-source HappyFox/bin/activate || { echo "Failed to activate virtualenv. Exiting..."; exit 1; }
+python3 -m venv virtual-env
+source virtual-env/bin/activate || { echo "Failed to activate virtualenv. Exiting..."; exit 1; }
 
 # 2. Install requirements
 echo "** Installing requirements from requirements.txt..."
-pip3 install -r HappyFox/requirements.txt || { echo "Failed to install requirements. Exiting..."; deactivate; exit 1; }
+pip3 install -r requirements.txt || { echo "Failed to install requirements. Exiting..."; deactivate; exit 1; }
 
 # 3. Setup python path (assuming current directory is project root)
 echo "** Setting up Python path..."
