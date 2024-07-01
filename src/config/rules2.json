@@ -1,0 +1,22 @@
+[
+  {
+    "rule_description": "test_case1",
+    "rules": [
+      {
+        "field": "to_email",
+        "condition": "contains",
+        "value": "magnetoxmen6@gmail.com"
+      },
+      {
+        "field": "received_date",
+        "condition": "less_than",
+        "value": "1 days"
+      }
+    ],
+    "predicate": "all",
+    "action": [
+      "unread",
+      "un-archive"
+    ]
+  }
+]
