@@ -4,7 +4,7 @@ from sqlalchemy import Column
 from entities.gmail_entity import GmailEntity
 from dao.models import Email
 from utils.constants import (ALLOWED_PREDICATES, ALLOWED_VALUE_TYPES, DATETIME_FIELDS, ALLOWED_TIME_VALUES,
-                             ALLOWED_FIELDS, ALLOWED_LABELS,LABEL_MAPPER)
+                                 ALLOWED_FIELDS, ALLOWED_LABELS, LABEL_MAPPER)
 from entities.rule_entity import Rule
 from entities.action_entity import GmailAction
 from utils.logger import Logger
