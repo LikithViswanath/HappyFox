@@ -19,7 +19,7 @@ export PYTHONPATH=$PYTHONPATH:./
 
 # 4. Start database using docker-compose
 echo "** Starting database containers..."
-docker-compose -f HappyFox/docker-compose.yaml up -d || { echo "Failed to start database containers. Exiting..."; deactivate; exit 1; }
+docker-compose -f docker-compose.yaml up -d || { echo "Failed to start database containers. Exiting..."; deactivate; exit 1; }
 
 echo "** Script ($SCRIPT_NAME) completed successfully! **"
 
