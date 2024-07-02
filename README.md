@@ -5,7 +5,7 @@
    git, docker-compose, python, google-cloud credentials.json file  
    ```
 
-1. Clone the Project Using git ( Ensure Git is installed ), once Cloning of the project is finished, change directory to HappyFox
+1. Clone the Project Using git ( Ensure Git is installed ), once Cloning of the project is finished, change directory to HappyFox and place the credentials.json file in the HappyFox directory.
     ```{console}
    git clone https://github.com/LikithViswanath/HappyFox.git
    cd HappyFox
