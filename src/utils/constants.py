@@ -7,7 +7,7 @@ DATETIME_FIELDS = ["received_date"]
 ALLOWED_TIME_VALUES = {
     "weeks": 7,
     "months": 30,
-    "days": 1
+    "days": 30
 }
 AND = 'all'
 OR = 'any'
