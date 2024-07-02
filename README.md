@@ -2,7 +2,7 @@
 
 0. Prerequisites
    ```{console}
-   git, docker-compose, python, google-cloud credentials 
+   git, docker-compose, python, google-cloud credentials  
    ```
 
 1. Clone the Project Using git ( Ensure Git is installed ), once Cloning of the project is finished, change directory to HappyFox
