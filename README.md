@@ -1,7 +1,7 @@
-## Steps:
-
 ## Youtube Demo and Walk-through:
     https://youtu.be/arBChAwX_rc
+
+## Steps:
 
 0. Prerequisites
    ```{console}
