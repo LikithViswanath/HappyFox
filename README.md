@@ -1,5 +1,8 @@
 ## Steps:
 
+## Youtube Demo and Walk-through:
+    https://youtu.be/arBChAwX_rc
+
 0. Prerequisites
    ```{console}
    git, docker-compose, python, google-cloud credentials.json file  
