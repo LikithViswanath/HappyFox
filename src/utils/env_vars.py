@@ -13,4 +13,4 @@ TOKEN_FILE = 'token.json'
 RULES_FILE = 'src/config/rules.json'
 USER_ID = "magnetoxmen6@gmail.com"
 
-LOGGING_LEVEL = "INFO"
+LOGGING_LEVEL = "DEBUG"
