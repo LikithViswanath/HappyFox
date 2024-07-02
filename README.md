@@ -2,7 +2,7 @@
 
 1. Clone the Project Using git ( Ensure Git is installed ), once Cloning of the project is finished, change directory to HappyFox
     ```{console}
-   git clone https://github.com/your-username/HappyFox.git
+   git clone https://github.com/LikithViswanath/HappyFox.git
    cd HappyFox
    ```
 2. Create and Activate Virtual Environment
