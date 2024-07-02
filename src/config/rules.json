@@ -10,7 +10,7 @@
       {
         "field": "received_date",
         "condition": "less_than",
-        "value": "1 days"
+        "value": "2 days"
       }
     ],
     "predicate": "all",
